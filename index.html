@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b14">
+  <title>Coming Soon | My Website</title>
+  <meta name="description" content="Something exciting is coming soon. Stay tuned!">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #080b14;
+      color: #fff;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .background {
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 20%, #164e6340, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, #6d28d940, transparent 50%);
+      z-index: -1;
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      border: 1px solid #ffffff20;
+      background: #ffffff0a;
+      padding: 9px 16px;
+      border-radius: 50px;
+      font-size: 12px;
+      color: #b8c4d9;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 35px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #34d399;
+      box-shadow: 0 0 12px #34d399;
+      animation: pulse 1.5s infinite;
+    }
+
+    h1 {
+      font-size: clamp(45px, 8vw, 85px);
+      font-weight: 800;
+      letter-spacing: -4px;
+      line-height: 1.1;
+      margin-bottom: 25px;
+    }
+
+    h1 span {
+      background: linear-gradient(90deg, #67e8f9, #a78bfa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .description {
+      max-width: 520px;
+      color: #94a3b8;
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 24px;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .primary {
+      background: #fff;
+      color: #080b14;
+    }
+
+    .primary:hover {
+      background: #67e8f9;
+      transform: translateY(-3px);
+    }
+
+    .secondary {
+      border: 1px solid #ffffff30;
+      color: #fff;
+    }
+
+    .secondary:hover {
+      background: #ffffff12;
+      transform: translateY(-3px);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 25px;
+      color: #64748b;
+      font-size: 12px;
+      text-align: center;
+      width: 100%;
+    }
+
+    @keyframes pulse {
+      50% { opacity: 0.4; }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .description {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background"></div>
+
+  <main class="container">
+
+    <div class="badge">
+      <span class="dot"></span>
+      Something is in the works
+    </div>
+
+    <h1>
+      Building something<br>
+      <span>awesome.</span>
+    </h1>
+
+    <p class="description">
+      Welcome to my little corner of the internet.
+      I'm currently working on something exciting.
+      My website will be launching soon.
+      Stay tuned!
+    </p>
+
+    <div class="buttons">
+      <a class="button primary"
+         href="https://github.com/YOUR_USERNAME"
+         target="_blank"
+         rel="noopener noreferrer">
+        Explore my GitHub ↗
+      </a>
+
+      <a class="button secondary"
+         href="mailto:hello@yourdomain.com">
+        Get in touch
+      </a>
+    </div>
+
+  </main>
+
+  <footer>
+    © <span id="year"></span> Your Name. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
